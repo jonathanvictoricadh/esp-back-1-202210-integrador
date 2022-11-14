@@ -37,6 +37,8 @@ spring:
             client-secret: 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
             scope: openid
             redirect_uri: http://localhost:8080/login/oauth2/code/google
+
+
 info:
   app:
     name: ${spring.application.name}
