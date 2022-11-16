@@ -31,7 +31,7 @@ resilience4j.circuitbreaker:
       waitDurationInOpenState: 50s
       failureRateThreshold: 50
       eventConsumerBufferSize: 10
-      recordFailurePredicate: io.github.robwin.exception.RecordFailurePredicate
+#      recordFailurePredicate: io.github.robwin.exception.RecordFailurePredicate
 
 resilience4j.retry:
   instances:
