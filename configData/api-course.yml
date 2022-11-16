@@ -43,5 +43,5 @@ resilience4j.retry:
       retryExceptions:
         - org.springframework.web.client.HttpServerErrorException
         - java.io.IOException
-      ignoreExceptions:
-        - io.github.robwin.exception.BusinessException
+#      ignoreExceptions:
+#        - io.github.robwin.exception.BusinessException
