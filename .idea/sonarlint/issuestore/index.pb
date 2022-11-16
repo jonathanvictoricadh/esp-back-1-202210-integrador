@@ -11,7 +11,5 @@ I
 docker/docker-compose.yml,3\f\3fe733692645251b38d6ef0a55b2d48c3a1cf387
 ?
 gateway/pom.xml,4\b\4b316bc60d1cfae51045f6fc8e58a8ae31f03ff3
-E
-testing/students.http,1\5\1582a8804e463f36b446caf7f3f132e8e8ddddee
 _
 /configServer/src/main/resources/application.yml,b\2\b28eac76046745705fc5f41eab2d4a9ca8038b9f

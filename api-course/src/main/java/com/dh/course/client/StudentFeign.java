@@ -11,15 +11,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(name = "api-student")
 public interface StudentFeign {
-    @CircuitBreaker(name = "clientStudent", fallbackMethod = "getByIdFallback")
-    @Retry(name = "clientStudent")
+
     @GetMapping("/api/v1/students/{id}")
     Student getById(@PathVariable Long id);
 
-    default Student getByIdFallback(@PathVariable Long id){
-        System.out.println("Hola hubo un error");
-        return null;
-    }
+
 
     @Getter
     @Setter

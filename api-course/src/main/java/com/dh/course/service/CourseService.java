@@ -4,7 +4,10 @@ import com.dh.course.client.StudentFeign;
 import com.dh.course.model.Course;
 import com.dh.course.model.CourseStudent;
 import com.dh.course.repository.CourseRepository;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -44,6 +47,9 @@ public class CourseService {
         }
     }
 
+
+    @CircuitBreaker(name = "clientStudent", fallbackMethod = "addStudentFallBack")
+    @Retry(name = "clientStudent")
     public void addStudent(Long idCourse, Long idStudent) throws Exception {
         var course = courseRepository.findById(idCourse);
         if (course.isPresent()) {
@@ -56,5 +62,10 @@ public class CourseService {
         }else{
             throw new Exception("Course not found");
         }
+    }
+
+    public void addStudentFallBack(Long idCourse, Long idStudent, Throwable t) throws Exception {
+        System.out.println("Hola hubo un error");
+
     }
 }
