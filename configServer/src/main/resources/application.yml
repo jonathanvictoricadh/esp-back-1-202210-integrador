@@ -9,6 +9,6 @@ spring:
       server:
         git:
           uri: https://github.com/jonathanvictoricadh/esp-back-1-202210-integrador
-          default-label: main
+          default-label: circuitBreak
           force-pull: true
           search-paths: configData
