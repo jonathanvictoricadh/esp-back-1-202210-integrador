@@ -12,6 +12,11 @@ spring:
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
+#  rabbitmq:
+#    username: guest
+#    password: guest
+#    host: localhost
+#    port: 5672
     
 eureka:
    client:
@@ -45,3 +50,9 @@ resilience4j.retry:
         - java.io.IOException
 #      ignoreExceptions:
 #        - io.github.robwin.exception.BusinessException
+
+
+
+#queue:
+#  student:
+#    name: StudentQueue

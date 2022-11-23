@@ -7,8 +7,6 @@ F
 configData/gateway.yml,9\1\9105884a137d9a78beafdfed360139b19d73208f
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-I
-docker/docker-compose.yml,3\f\3fe733692645251b38d6ef0a55b2d48c3a1cf387
 ?
 gateway/pom.xml,4\b\4b316bc60d1cfae51045f6fc8e58a8ae31f03ff3
 _
