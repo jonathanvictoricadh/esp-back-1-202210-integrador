@@ -3,8 +3,10 @@ package com.dh.course;
 import com.dh.course.model.Course;
 import com.dh.course.model.CourseStudent;
 import com.dh.course.repository.CourseRepository;
+import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
@@ -16,6 +18,8 @@ import java.util.List;
 @SpringBootApplication
 @EnableJpaRepositories
 @EnableFeignClients
+@EnableRabbit
+@AutoConfiguration
 public class ApiCourseApplication {
 
     public static void main(String[] args) {
