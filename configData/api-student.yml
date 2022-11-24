@@ -12,11 +12,11 @@ spring:
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
-#  rabbitmq:
-#    username: guest
-#    password: guest
-#    host: localhost
-#    port: 5672
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
     
     
 eureka:
@@ -26,6 +26,3 @@ eureka:
       serviceURL:
          defaultZone: http://localhost:8761/eureka
 
-#queue:
-#  student:
-#    name: StudentQueue
