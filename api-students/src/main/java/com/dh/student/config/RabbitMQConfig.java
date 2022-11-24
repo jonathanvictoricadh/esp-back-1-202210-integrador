@@ -15,26 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitMQConfig {
 
     public static final String EXCHANGE_NAME = "digitalHouseExchange";
-    public static final String QUEUE_COURSE = "courseMetricsQueue";
     public static final String ROUTING_KEY_METRIC_COURSE = "com.digitalhouse.metriccourse";
-
-
-    @Bean
-    public TopicExchange appExchange() {
-        return new TopicExchange(EXCHANGE_NAME);
-    }
-
-    @Bean
-    public Queue courseQueue() {
-        return new Queue(QUEUE_COURSE);
-    }
-
-
-    @Bean
-    public Binding declareBindingGeneric() {
-        return BindingBuilder.bind(courseQueue()).to(appExchange()).with(ROUTING_KEY_METRIC_COURSE);
-    }
-
 
 
 

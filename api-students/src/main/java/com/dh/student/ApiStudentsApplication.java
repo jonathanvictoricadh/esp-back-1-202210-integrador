@@ -14,13 +14,11 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories
 @EnableRabbit
 @AutoConfiguration
-public class ApiStudentApplication {
+public class ApiStudentsApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApiStudentApplication.class, args);
+        SpringApplication.run(ApiStudentsApplication.class, args);
     }
-
-
     @Bean
     public CommandLineRunner loadData(StudentRepository repository) {
         return (args) -> {
@@ -34,5 +32,4 @@ public class ApiStudentApplication {
             repository.save(new Student(44L,"Alumno 4", "Apellido 4"));
         };
     }
-
 }

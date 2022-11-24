@@ -15,9 +15,8 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitMQConfig {
 
     public static final String EXCHANGE_NAME = "digitalHouseExchange";
-    public static final String QUEUE_STUDENT = "studentsMetricsQueue";
     public static final String QUEUE_COURSE = "courseMetricsQueue";
-    public static final String ROUTING_KEY_METRIC_COURSE_RESPONSE = "com.digitalhouse.metriccourseresponse";
+    public static final String ROUTING_KEY_METRIC_COURSE = "com.digitalhouse.metriccourse";
 
 
     @Bean
@@ -28,15 +27,17 @@ public class RabbitMQConfig {
 
 
     @Bean
-    public Queue studentQueue() {
-        return new Queue(QUEUE_STUDENT);
+    public Queue courseQueue() {
+        return new Queue(QUEUE_COURSE,true);
     }
 
 
     @Bean
-    public Binding declareBindingSpecific() {
-        return BindingBuilder.bind(studentQueue()).to(appExchange()).with(ROUTING_KEY_METRIC_COURSE_RESPONSE);
+    public Binding declareBindingGeneric() {
+        return BindingBuilder.bind(courseQueue()).to(appExchange()).with(ROUTING_KEY_METRIC_COURSE);
     }
+
+
 
 
     @Bean
