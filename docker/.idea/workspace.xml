@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc2eada1-affd-4da9-a2f6-cd45c8e76e10" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/dh-student-elk.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-students/src/main/java/com/dh/student/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-students/src/main/java/com/dh/student/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-students/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-students/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +30,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/jonat/Downloads/dh-spring-elk/dh-spring-elk",
+    "last_opened_file_path": "C:/DigitalHouse/esp-back-1-202210-integrador/docker",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
@@ -53,7 +57,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669642048739</updated>
-      <workItem from="1669642050093" duration="1098000" />
+      <workItem from="1669642050093" duration="1458000" />
+      <workItem from="1669668805412" duration="3549000" />
     </task>
     <servers />
   </component>

@@ -47,7 +47,7 @@ services:
     volumes:
       - elastic_data:/usr/share/elasticsearch/data/
     environment:
-      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      ES_JAVA_OPTS: "-Xmx1024m -Xms1024m"
       discovery.type: single-node
     ports:
       - '9200:9200'
@@ -61,13 +61,13 @@ services:
     restart: always
     volumes:
       - ./logstash/:/logstash_dir
-    command: logstash -f /logstash_dir/logstash.conf
+#    command: logstash -f ./dh-student-elk.conf
     depends_on:
       - Elasticsearch
     ports:
       - '9600:9600'
     environment:
-      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+      LS_JAVA_OPTS: "-Xmx1024m -Xms1024m"
     networks:
       - elk
   #  Framework para la visualización de los logs
